@@ -28,7 +28,7 @@ h1 {
 p {
 
  margin-bottom: 5px;
- text-indent: 20px;
+
 }
 
 body {
@@ -183,16 +183,109 @@ article h2 {
 #skills-container .progresso {
   height:100%;
   background-color: var(--destaque-inverso);
-  border-radius: 4px;
+  border-radius: 5px;
 }
+#formacao-container {
+  display: flex;
+  flex-direction: column-reverse
+}
+div.curso {
+  background-color: var(--fundo-principal);
+   font-size: .9em;
+   padding-left:  10px;
+   border-left: 6px solid var(--destaque-inverso);
+   margin-bottom: 10px;
+   border-radius: 10px;
+   transition: border-left 0.5s; 
+   
+}
+div.curso:hover {
+  border-left: 15px solid var(--destaque);
+  cursor: pointer;
+
+
+} h3 {
+  color: var(--destaque);
+ 
+}
+
+p.periodo {
+  font-size: .8em;
+  font-weight: bold;
+ 
+}
+div.instituicao {
+ color: var(--destaque-inverso)
+}
+
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-left 0.5s;
+}
+
+#projeto-container .projeto:hover {
+  border-left: 15px solid var(--destaque);
+  cursor: pointer;
+}
+#projeto-container .foto {
+  width:100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+  
+}
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+  
+}
+
+footer a  {
+  color: var(--destaque-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
 
 @media screen and (min-width: 768px) {
   #skills-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  #projeto-container .projeto{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    width: 70%;
+  }
+
+  #projeto-container .foto {
+   aspect-ratio: 1/1;
+   max-width: 30%;
+   max-height: 250px;
   }
   
-
+}
 
  
 
