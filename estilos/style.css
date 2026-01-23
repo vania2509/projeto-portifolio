@@ -39,9 +39,15 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
   background-color: var(--destaque);
   color: var(--texto);
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 #menu ul {
@@ -65,9 +71,12 @@ header {
   color: var(--destaque);
 }
 
+
+
 div#social ul li a  {
   color: var(--destaque);
-  font-size: 1.5em;
+  font-size: 1em;
+  
   transition: color 0.3s;
 }
 div#social li a:hover {
@@ -109,16 +118,18 @@ section#ficha h1 {
   text-align: left
 }
 div#social {
-  display:flex;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
 }
 div#social ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6em;
+  font-size: 1.2em;
   list-style: none;
-  gap:1em;
+  gap: 10px;
   margin-bottom: 10px;
   margin-top: 15px;
   color: var(--destaque);
@@ -142,7 +153,7 @@ article h2 {
   width: 100%;
   margin: auto;
   aspect-ratio: 16/9;
-  border: 5px solid red;
+ 
 }
 
 .video-container iframe {
@@ -251,7 +262,7 @@ footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   
 }
 
@@ -266,6 +277,22 @@ footer a  {
 
 
 @media screen and (min-width: 768px) {
+ main {
+  grid-template-columns: auto 300px 1fr auto;
+
+ }
+
+ section#ficha {
+  grid-column: 2;
+  height: fit-content;
+  position: sticky;
+  top: 65px;
+ }
+
+ section#detalhes {
+  grid-column: 3 ;
+ }
+
   #skills-container {
     grid-template-columns: 1fr 1fr;
   }
